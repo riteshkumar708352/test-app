@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: jungle
-          image: nginx:1.27-alpine
+          image: l1srv2vksimg.bajajlife.com/bajajlife/nginx:stable-alpine
 
           ports:
             - containerPort: 80
