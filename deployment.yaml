@@ -18,6 +18,13 @@ spec:
       containers:
         - name: jungle
           image: l1srv2vksimg.bajajlife.com/bajajlife/nginx:stable-alpine
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
 
           ports:
             - containerPort: 80
